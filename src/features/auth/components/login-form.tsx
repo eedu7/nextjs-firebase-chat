@@ -4,8 +4,10 @@ import { useAppForm } from "@/hooks/form";
 import { FieldGroup, FieldSet } from "@/components/ui/field";
 import { revalidateLogic } from "@tanstack/form-core";
 import { userLoginSchema } from "@/features/auth/auth.schema";
+import { useAuth } from "@/features/auth/hooks/use-auth";
 
 export const LoginForm = () => {
+    const { login } = useAuth();
     const form = useAppForm({
         defaultValues: {
             email: "",
@@ -14,6 +16,9 @@ export const LoginForm = () => {
         validationLogic: revalidateLogic(),
         validators: {
             onDynamic: userLoginSchema,
+        },
+        onSubmit: ({ value }) => {
+            login.mutate(value);
         },
     });
     return (
@@ -40,7 +45,7 @@ export const LoginForm = () => {
                             )}
                         />
                         <form.AppField
-                            name="email"
+                            name="password"
                             children={(field) => (
                                 <field.PasswordField
                                     label="Password"

@@ -4,8 +4,10 @@ import { FieldGroup, FieldSet } from "@/components/ui/field";
 import { useAppForm } from "@/hooks/form";
 import { revalidateLogic } from "@tanstack/form-core";
 import { userRegisterSchema } from "@/features/auth/auth.schema";
+import { useAuth } from "@/features/auth/hooks/use-auth";
 
 export const RegisterForm = () => {
+    const { register } = useAuth();
     const form = useAppForm({
         defaultValues: {
             email: "",
@@ -14,6 +16,9 @@ export const RegisterForm = () => {
         validationLogic: revalidateLogic(),
         validators: {
             onDynamic: userRegisterSchema,
+        },
+        onSubmit: ({ value }) => {
+            register.mutate(value);
         },
     });
     return (
@@ -40,7 +45,7 @@ export const RegisterForm = () => {
                             )}
                         />
                         <form.AppField
-                            name="email"
+                            name="password"
                             children={(field) => (
                                 <field.PasswordField
                                     label="Password"
@@ -52,7 +57,10 @@ export const RegisterForm = () => {
                     </FieldGroup>
                 </FieldSet>
                 <form.AppForm>
-                    <form.SubmitButton label="Register" />
+                    <form.SubmitButton
+                        label="Register"
+                        isPending={register.isPending}
+                    />
                 </form.AppForm>
             </FieldGroup>
         </form>
