@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7408fa9e-2c6d-4708-a400-777a83c6a1f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/app/auth/layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/auth/login/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/auth/register/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/components/login-page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/components/register-form.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/layout/auth-layout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/pages/login-page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/auth/pages/register-page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/firebase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/firebase.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +75,7 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\projects\\nextjs-firebase-chat\\node_modules\\prettier&quot;,
     &quot;rearrange.code.on.save&quot;: &quot;true&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
     &quot;ts.external.directory.path&quot;: &quot;D:\\projects\\nextjs-firebase-chat\\node_modules\\typescript\\lib&quot;,
@@ -78,6 +85,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\projects\nextjs-firebase-chat" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\nextjs-firebase-chat\src\app\auth\register" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -95,7 +105,7 @@
       <option name="presentableId" value="Default" />
       <updated>1774437614493</updated>
       <workItem from="1774437616979" duration="129000" />
-      <workItem from="1774437768060" duration="5656000" />
+      <workItem from="1774437768060" duration="7026000" />
     </task>
     <servers />
   </component>
