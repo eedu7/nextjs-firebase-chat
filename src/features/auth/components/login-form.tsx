@@ -1,12 +1,19 @@
 "use client";
+
 import { useAppForm } from "@/hooks/form";
 import { FieldGroup, FieldSet } from "@/components/ui/field";
+import { revalidateLogic } from "@tanstack/form-core";
+import { userLoginSchema } from "@/features/auth/auth.schema";
 
 export const LoginForm = () => {
     const form = useAppForm({
         defaultValues: {
             email: "",
             password: "",
+        },
+        validationLogic: revalidateLogic(),
+        validators: {
+            onDynamic: userLoginSchema,
         },
     });
     return (
