@@ -1,3 +1,12 @@
+import { AuthCard } from "@/features/auth/components/auth-card";
+import { LoginForm } from "@/features/auth/components/login-form";
+
 export async function LoginPage() {
-    return <h1>Login Page</h1>;
+    return (
+        <AuthCard
+            title="Login"
+            description="Login to your account"
+            children={<LoginForm />}
+        />
+    );
 }
