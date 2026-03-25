@@ -1,7 +1,7 @@
 import { useMutation } from "@tanstack/react-query";
 import { UserLoginSchema, UserRegisterSchema } from "@/features/auth/auth.schema";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, User } from "@firebase/auth";
-import { auth } from "@/lib/firebase";
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, User } from "@firebase/auth";
+import { auth, googleProvider } from "@/lib/firebase";
 import { useRouter } from "next/navigation";
 
 export function useAuth() {
@@ -56,11 +56,25 @@ export function useAuth() {
             "use-auth",
             "authentication",
         ],
-        mutationFn: async () => {},
+        mutationFn: async () => {
+            try {
+                const userCredentials = await signInWithPopup(
+                    auth,
+                    googleProvider,
+                );
+                return userCredentials.user;
+            } catch (error) {
+                throw new Error(
+                    // @ts-ignore
+                    error?.message ?? "An unknown error has occurred.",
+                );
+            }
+        },
     });
 
     return {
         register,
         login,
+        signInWithGoogle,
     };
 }
