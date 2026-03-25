@@ -1,16 +1,18 @@
-import {environmentManager, QueryClient} from "@tanstack/react-query";
-import {defaultShouldDehydrateQuery} from "@tanstack/query-core";
-
+import { environmentManager, QueryClient } from "@tanstack/react-query";
+import { defaultShouldDehydrateQuery } from "@tanstack/query-core";
 
 function makeQueryClient() {
     return new QueryClient({
         defaultOptions: {
             queries: {
-                staleTime: 60 * 1000
-            }, dehydrate: {
+                staleTime: 60 * 1000,
+            },
+            dehydrate: {
                 // Include pending queries in dehydration
-                shouldDehydrateQuery: (query) => defaultShouldDehydrateQuery(query) || query.state.status === "pending"
-            }
+                shouldDehydrateQuery: (query) =>
+                    defaultShouldDehydrateQuery(query) ||
+                    query.state.status === "pending",
+            },
         },
     });
 }
