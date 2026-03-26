@@ -5,12 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7408fa9e-2c6d-4708-a400-777a83c6a1f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/features/blog/components/blog-collection.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/[blogId]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/dashboard/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/blog/pages/blog-id-page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/blog/pages/dashboard-page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/blog/components/blog-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/components/blog-card.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/blog/components/blog-navbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/components/blog-navbar.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/blog/components/create-blog-dialog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/components/create-blog-dialog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/pages/blog-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/pages/blog-page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +124,7 @@
       <updated>1774437614493</updated>
       <workItem from="1774437616979" duration="129000" />
       <workItem from="1774437768060" duration="12749000" />
-      <workItem from="1774490054063" duration="16595000" />
+      <workItem from="1774490054063" duration="17851000" />
     </task>
     <servers />
   </component>

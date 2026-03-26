@@ -20,7 +20,7 @@ export const BlogNavbar = () => {
         <NavigationMenu>
             <NavigationMenuList>
                 {currentUser ? (
-                    <>
+                    <div className="flex gap-2">
                         <NavigationMenuItem>
                             <Button
                                 type="button"
@@ -34,9 +34,17 @@ export const BlogNavbar = () => {
                         <NavigationMenuItem>
                             <CreateBlogDialog authorId={currentUser.uid} />
                         </NavigationMenuItem>
-                    </>
+                        <NavigationMenuItem>
+                            <NavigationMenuLink
+                                asChild
+                                className={navigationMenuTriggerStyle()}
+                            >
+                                <Link href="/dashboard">Dashboard</Link>
+                            </NavigationMenuLink>
+                        </NavigationMenuItem>
+                    </div>
                 ) : (
-                    <>
+                    <div className="flex gap-2">
                         <NavigationMenuItem>
                             <NavigationMenuLink
                                 asChild
@@ -53,7 +61,7 @@ export const BlogNavbar = () => {
                                 <Link href="/auth/register">Sign out</Link>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
-                    </>
+                    </div>
                 )}
             </NavigationMenuList>
         </NavigationMenu>
