@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7408fa9e-2c6d-4708-a400-777a83c6a1f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/features/blog/hooks/use-blogs.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/blog/components/blog-navbar.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/blog/components/create-blog-dialog.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/blog.client.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/blog.client.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/blog/blog.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/blog.types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/features/blog/pages/blog-page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/blog/pages/blog-page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +18,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -120,7 +120,7 @@
       <updated>1774437614493</updated>
       <workItem from="1774437616979" duration="129000" />
       <workItem from="1774437768060" duration="12749000" />
-      <workItem from="1774490054063" duration="13419000" />
+      <workItem from="1774490054063" duration="15392000" />
     </task>
     <servers />
   </component>
