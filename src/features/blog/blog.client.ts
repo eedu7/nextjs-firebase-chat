@@ -8,12 +8,12 @@ import {
     query,
     serverTimestamp,
     updateDoc,
-    where
+    where,
 } from "@firebase/firestore";
 import { clientDb } from "@/lib/firebase/client";
-import { Blog } from "@/features/blog/blog.types";
+import { Blog, BlogWithId } from "@/features/blog/blog.types";
 
-export async function createBlog(data: Omit<Blog, "createdAt">) {
+export async function createBlog(data: Omit<Blog, "createdAt" | "updatedAt">) {
     const docRef = await addDoc(collection(clientDb, "blog"), {
         createdAt: serverTimestamp(),
         ...data,
@@ -21,7 +21,7 @@ export async function createBlog(data: Omit<Blog, "createdAt">) {
     return docRef.id;
 }
 
-export async function getBlogs(): Promise<(Blog & { id: string })[]> {
+export async function getBlogs(): Promise<BlogWithId[]> {
     const snapshot = await getDocs(collection(clientDb, "blog"));
 
     return snapshot.docs.map((snap) => ({
@@ -30,9 +30,7 @@ export async function getBlogs(): Promise<(Blog & { id: string })[]> {
     }));
 }
 
-export async function getBlogByID(
-    id: string,
-): Promise<(Blog & { id: string }) | null> {
+export async function getBlogByID(id: string): Promise<BlogWithId | null> {
     const docRef = doc(clientDb, "blog", id);
     const snapshot = await getDoc(docRef);
 
@@ -64,7 +62,7 @@ export async function deleteBlog(id: string) {
 
 export async function getBlogsByAuthorId(
     authorId: string,
-): Promise<(Blog & { id: string })[]> {
+): Promise<BlogWithId[]> {
     const q = query(
         collection(clientDb, "blog"),
         where("authorId", "==", authorId),

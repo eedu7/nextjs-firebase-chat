@@ -1,6 +1,6 @@
 import { Timestamp } from "firebase/firestore";
 
-export interface Blog {
+export type Blog = {
     title: string;
     description: string;
     content: string;
@@ -8,4 +8,8 @@ export interface Blog {
     published: boolean;
     createdAt: Timestamp;
     updatedAt?: Timestamp;
-}
+};
+
+export type BlogWithId = Blog & {
+    id: string;
+};
