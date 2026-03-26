@@ -7,6 +7,7 @@ import {
     createUserWithEmailAndPassword,
     signInWithEmailAndPassword,
     signInWithPopup,
+    signOut,
     User,
 } from "@firebase/auth";
 import { auth, googleProvider } from "@/lib/firebase";
@@ -48,7 +49,7 @@ export function useAuth() {
                 return userCredentials.user;
             } catch (error) {
                 throw new Error(
-                    // @ts-ignore
+                    // @ts-expect-error
                     error?.message ?? "An unknown error has occurred.",
                 );
             }
@@ -73,9 +74,21 @@ export function useAuth() {
                 return userCredentials.user;
             } catch (error) {
                 throw new Error(
-                    // @ts-ignore
+                    // @ts-expect-error
                     error?.message ?? "An unknown error has occurred.",
                 );
+            }
+        },
+    });
+
+    const logout = useMutation({
+        mutationKey: ["use-logout", "use-auth", "authentication"],
+        mutationFn: async () => {
+            try {
+                signOut(auth);
+            } catch (error) {
+                // @ts-expect-error
+                error?.message ?? "An unknown error has occurred.";
             }
         },
     });
@@ -84,5 +97,6 @@ export function useAuth() {
         register,
         login,
         signInWithGoogle,
+        logout,
     };
 }
