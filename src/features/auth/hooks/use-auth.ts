@@ -1,6 +1,14 @@
 import { useMutation } from "@tanstack/react-query";
-import { UserLoginSchema, UserRegisterSchema } from "@/features/auth/auth.schema";
-import { createUserWithEmailAndPassword, signInWithEmailAndPassword, signInWithPopup, User } from "@firebase/auth";
+import {
+    UserLoginSchema,
+    UserRegisterSchema,
+} from "@/features/auth/auth.schema";
+import {
+    createUserWithEmailAndPassword,
+    signInWithEmailAndPassword,
+    signInWithPopup,
+    User,
+} from "@firebase/auth";
 import { auth, googleProvider } from "@/lib/firebase";
 import { useRouter } from "next/navigation";
 
