@@ -4,10 +4,10 @@ import { FieldGroup, FieldSet } from "@/components/ui/field";
 import { useAppForm } from "@/hooks/form";
 import { revalidateLogic } from "@tanstack/form-core";
 import { userRegisterSchema } from "@/features/auth/auth.schema";
-import { useRegister } from "@/features/auth/hooks/use-auth";
+import { useAuth } from "@/features/auth/context/auth-context";
 
 export const RegisterForm = () => {
-    const register = useRegister();
+    const { register } = useAuth();
     const form = useAppForm({
         defaultValues: {
             email: "",

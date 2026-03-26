@@ -65,6 +65,7 @@ export const useLogin = () => {
 };
 
 export const useSignInWithGoogle = () => {
+    const router = useRouter();
     return useMutation({
         mutationKey: [
             "use-google-social-provider",
@@ -84,6 +85,9 @@ export const useSignInWithGoogle = () => {
                     error?.message ?? "An unknown error has occurred.",
                 );
             }
+        },
+        onSuccess: (data) => {
+            router.push("/");
         },
     });
 };

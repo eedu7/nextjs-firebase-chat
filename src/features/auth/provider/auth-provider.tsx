@@ -2,11 +2,17 @@
 import { useEffect, useState } from "react";
 import { onAuthStateChanged, User } from "@firebase/auth";
 import { clientAuth } from "@/lib/firebase/client";
-import { AuthContext } from "../context/auth";
+import { AuthContext } from "../context/auth-context";
+import { useLogin, useLogout, useRegister, useSignInWithGoogle } from "@/features/auth/hooks/auth.hooks";
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
     const [currentUser, setCurrentUser] = useState<User | null>(null);
     const [loading, setLoading] = useState<boolean>(true);
+
+    const login = useLogin();
+    const register = useRegister();
+    const logout = useLogout();
+    const signInWithGoogle = useSignInWithGoogle();
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(clientAuth, (user) => {
@@ -21,6 +27,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
         currentUser,
         loading,
         isAuthenticated: !!currentUser,
+
+        // hooks
+        login,
+        register,
+        logout,
+        signInWithGoogle,
     };
 
     return (
