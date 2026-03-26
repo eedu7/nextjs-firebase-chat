@@ -24,7 +24,6 @@ export const CreateBlogDialog = ({ authorId }: { authorId: string }) => {
             content: "",
         },
         onSubmit: ({ value }) => {
-            alert("Hello world!");
             createBlog.mutate({
                 ...value,
                 published: true,
