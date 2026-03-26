@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7408fa9e-2c6d-4708-a400-777a83c6a1f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/features/blog/components/blog-card.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/features/blog/pages/blog-page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/auth/components/login-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/components/login-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/auth/components/logout-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/components/logout-button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/auth/components/register-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/components/register-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/auth/components/social-login.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/components/social-login.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/auth/context/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/context/auth-context.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/auth/hooks/use-auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/hooks/auth.hooks.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/features/auth/provider/auth-provider.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/provider/auth-provider.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -125,7 +121,7 @@
       <updated>1774437614493</updated>
       <workItem from="1774437616979" duration="129000" />
       <workItem from="1774437768060" duration="12749000" />
-      <workItem from="1774490054063" duration="8960000" />
+      <workItem from="1774490054063" duration="9892000" />
     </task>
     <servers />
   </component>

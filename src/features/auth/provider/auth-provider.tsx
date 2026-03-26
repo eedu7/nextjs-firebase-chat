@@ -3,7 +3,12 @@ import { useEffect, useState } from "react";
 import { onAuthStateChanged, User } from "@firebase/auth";
 import { clientAuth } from "@/lib/firebase/client";
 import { AuthContext } from "../context/auth-context";
-import { useLogin, useLogout, useRegister, useSignInWithGoogle } from "@/features/auth/hooks/auth.hooks";
+import {
+    useLogin,
+    useLogout,
+    useRegister,
+    useSignInWithGoogle,
+} from "@/features/auth/hooks/auth.hooks";
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
     const [currentUser, setCurrentUser] = useState<User | null>(null);
