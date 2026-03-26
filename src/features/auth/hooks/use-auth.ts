@@ -14,9 +14,9 @@ import { googleProvider } from "@/lib/firebase/providers";
 import { useRouter } from "next/navigation";
 import { clientAuth } from "@/lib/firebase/client";
 
-export function useAuth() {
+export function useRegister() {
     const router = useRouter();
-    const register = useMutation<User, Error, UserRegisterSchema>({
+    return useMutation<User, Error, UserRegisterSchema>({
         mutationKey: ["use-register", "use-auth", "authentication"],
         mutationFn: async ({ email, password }): Promise<User> => {
             try {
@@ -37,8 +37,11 @@ export function useAuth() {
             router.push("/");
         },
     });
+}
 
-    const login = useMutation<User, Error, UserLoginSchema>({
+export const useLogin = () => {
+    const router = useRouter();
+    return useMutation<User, Error, UserLoginSchema>({
         mutationKey: ["use-login", "use-auth", "authentication"],
         mutationFn: async ({ email, password }) => {
             try {
@@ -59,8 +62,10 @@ export function useAuth() {
             router.push("/");
         },
     });
+};
 
-    const signInWithGoogle = useMutation({
+export const useSignInWithGoogle = () => {
+    return useMutation({
         mutationKey: [
             "use-google-social-provider",
             "use-auth",
@@ -81,8 +86,10 @@ export function useAuth() {
             }
         },
     });
+};
 
-    const logout = useMutation({
+export const useLogout = () => {
+    return useMutation({
         mutationKey: ["use-logout", "use-auth", "authentication"],
         mutationFn: async () => {
             try {
@@ -93,11 +100,4 @@ export function useAuth() {
             }
         },
     });
-
-    return {
-        register,
-        login,
-        signInWithGoogle,
-        logout,
-    };
-}
+};

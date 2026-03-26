@@ -1,10 +1,10 @@
 "use client";
 import { Field } from "@/components/ui/field";
 import { Button } from "@/components/ui/button";
-import { useAuth } from "@/features/auth/hooks/use-auth";
+import { useSignInWithGoogle } from "@/features/auth/hooks/use-auth";
 
 export const SocialLogin = () => {
-    const { signInWithGoogle } = useAuth();
+    const signInWithGoogle = useSignInWithGoogle();
     return (
         <Field orientation="horizontal">
             <Button
