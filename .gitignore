@@ -40,4 +40,4 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-/fire-base-secrets.json
+/src/lib/fire-base-secrets.json

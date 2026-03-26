@@ -5,9 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7408fa9e-2c6d-4708-a400-777a83c6a1f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/lib/firebase-admin.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/features/auth/hooks/use-auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/features/auth/hooks/use-auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bun.lock" beforeDir="false" afterPath="$PROJECT_DIR$/bun.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/fire-base-secrets.example.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/fire-base-secrets.example.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -83,6 +86,7 @@
       <recent name="D:\projects\nextjs-firebase-chat" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\projects\nextjs-firebase-chat\src\lib" />
       <recent name="D:\projects\nextjs-firebase-chat\src\app\auth\register" />
     </key>
   </component>
@@ -117,7 +121,7 @@
       <updated>1774437614493</updated>
       <workItem from="1774437616979" duration="129000" />
       <workItem from="1774437768060" duration="12749000" />
-      <workItem from="1774490054063" duration="1071000" />
+      <workItem from="1774490054063" duration="1720000" />
     </task>
     <servers />
   </component>
