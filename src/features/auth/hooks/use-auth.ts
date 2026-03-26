@@ -10,8 +10,9 @@ import {
     signOut,
     User,
 } from "@firebase/auth";
-import { auth, googleProvider } from "@/lib/firebase";
+import { googleProvider } from "@/lib/firebase/providers";
 import { useRouter } from "next/navigation";
+import { clientAuth } from "@/lib/firebase/client";
 
 export function useAuth() {
     const router = useRouter();
@@ -20,7 +21,7 @@ export function useAuth() {
         mutationFn: async ({ email, password }): Promise<User> => {
             try {
                 const userCredentials = await createUserWithEmailAndPassword(
-                    auth,
+                    clientAuth,
                     email,
                     password,
                 );
@@ -32,7 +33,7 @@ export function useAuth() {
                 );
             }
         },
-        onSuccess: (data) => {
+        onSuccess: () => {
             router.push("/");
         },
     });
@@ -42,7 +43,7 @@ export function useAuth() {
         mutationFn: async ({ email, password }) => {
             try {
                 const userCredentials = await signInWithEmailAndPassword(
-                    auth,
+                    clientAuth,
                     email,
                     password,
                 );
@@ -68,7 +69,7 @@ export function useAuth() {
         mutationFn: async () => {
             try {
                 const userCredentials = await signInWithPopup(
-                    auth,
+                    clientAuth,
                     googleProvider,
                 );
                 return userCredentials.user;
@@ -85,7 +86,7 @@ export function useAuth() {
         mutationKey: ["use-logout", "use-auth", "authentication"],
         mutationFn: async () => {
             try {
-                signOut(auth);
+                signOut(clientAuth);
             } catch (error) {
                 // @ts-expect-error
                 error?.message ?? "An unknown error has occurred.";
